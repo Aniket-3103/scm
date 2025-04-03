@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About US</title>
+</head>
+<body>
+    <h1 class="m-auto text-4xl">
+        About us
+    </h1>
+
+    <div th:replace="~{base :: parent(~{:: #hai-kuch})}">
+        <section>
+            <h2 id="hai-kuch">Ye toh mast hai yaar</h2>
+            <p>It's just like EJS.</p>
+            <button>Is it COOL?</button>
+        </section>
+    </div>
+</body>
+</html>

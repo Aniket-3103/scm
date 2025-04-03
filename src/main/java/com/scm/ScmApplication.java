@@ -8,7 +8,7 @@ public class ScmApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ScmApplication.class, args);
-		System.out.println("hey");	
+		System.out.println("hey");
 	}
 
 }

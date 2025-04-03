@@ -18,4 +18,17 @@ public class PageController {
         //whatever string we're returning, html file of that name should be present in templates
         return "home";
     }
+
+    //about page
+    @RequestMapping("/about")
+    public String aboutPage(){
+        return "about";
+    }
+
+    //service page
+    @RequestMapping("/services")
+    public String servicesPage(Model model){
+        model.addAttribute("isLogin", false);
+        return "services";
+    }
 }

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our services</title>
+</head>
+<body>
+    basic services page
+    <!-- We have passed whole html from here to our parent fragment which will render it -->
+    <div th:insert="${isLogin} ? ~{base :: parent(~{::p})} : ~{base :: test}">
+        <p class="bg-slate-500">
+            You're logged in. And this is your dynamic content.
+        </p>
+    </div>
+</body>
+</html>
