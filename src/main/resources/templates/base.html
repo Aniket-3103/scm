@@ -1,9 +1,38 @@
-<div th:fragment="parent(content)">
-    <h1>I'm a parent fragment</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi quos officia. Nostrum, atque dignissimos!</p>
-    <div th:replace="${content}"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en" th:fragment="parent(content, title)" xmlns:th="http://www.thymeleaf.org">
 
-<div th:fragment="test" class="bg-red-500 text-white">
-    <h4>You're not logged in!!!1</h4>
-</div>
+<head>
+    <!-- No need to meta title and all in pages where we're going to embed base fragment -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th-replace="${title}"></title>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
+
+</head>
+
+<body>
+    
+    <!-- navbar -->
+    <ul class="p-4 flex mx-auto">
+        <li>
+            <a data-th-href="@{/}">Home</a>
+        </li>
+        <li>
+            <a data-th-href="@{/services}">Services</a>
+        </li>
+        <li>
+            <a data-th-href="@{/about}">About Us</a>
+        </li>
+    </ul>
+
+    <!-- dynamic content -->
+    <section data-th-replace="${content}" class="p-4">
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>

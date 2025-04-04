@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::div}, ~{::title})}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our services</title>
+
+    <title>
+        Services
+    </title>
+
 </head>
 <body>
-    basic services page
-    <!-- We have passed whole html from here to our parent fragment which will render it -->
-    <div th:insert="${isLogin} ? ~{base :: parent(~{::p})} : ~{base :: test}">
-        <p class="bg-slate-500">
-            You're logged in. And this is your dynamic content.
-        </p>
+
+    <div>
+        Services offered by SCM: 
+        <ul>
+            <li>laptop</li>
+            <li>smartphone</li>
+            <li>CPUs</li>
+        </ul>
     </div>
+
 </body>
 </html>
