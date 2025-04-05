@@ -31,4 +31,22 @@ public class PageController {
         model.addAttribute("isLogin", false);
         return "services";
     }
+
+    //contact page
+    @RequestMapping("/contacts")
+    public String contactsPage(){
+        return "contact";
+    }
+
+    //login page
+    @RequestMapping("/login")
+    public String loginPage(){
+        return "login";
+    }
+
+    //register page
+    @RequestMapping("/register")
+    public String registerPage(){
+        return "register";
+    }
 }

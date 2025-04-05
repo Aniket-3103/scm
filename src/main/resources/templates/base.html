@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" th:fragment="parent(content, title)" xmlns:th="http://www.thymeleaf.org">
+<html class="light" lang="en" th:fragment="parent(content, title)" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <!-- No need to meta title and all in pages where we're going to embed base fragment -->
@@ -13,22 +13,14 @@
 
 </head>
 
-<body>
+<body class="h-screen w-full dark:bg-gray-900 dark:text-white">
     
     <!-- navbar -->
-    <ul class="p-4 flex mx-auto">
-        <li>
-            <a data-th-href="@{/}">Home</a>
-        </li>
-        <li>
-            <a data-th-href="@{/services}">Services</a>
-        </li>
-        <li>
-            <a data-th-href="@{/about}">About Us</a>
-        </li>
-    </ul>
+    <div data-th-replace="~{navbar :: navbar}">
 
-    <!-- dynamic content -->
+    </div>
+
+    <!-- main dynamic content -->
     <section data-th-replace="${content}" class="p-4">
 
     </section>
